@@ -259,7 +259,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Navigation/shortcuts/" class="md-nav__link">
+      <a href="Navigation/Home/shortcuts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -280,7 +280,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Navigation/favorites/" class="md-nav__link">
+      <a href="Navigation/Home/favorites/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -301,7 +301,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Navigation/dashboards/" class="md-nav__link">
+      <a href="Navigation/Home/dashboards/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -322,7 +322,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Navigation/widgets/" class="md-nav__link">
+      <a href="Navigation/Home/widgets/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -828,6 +828,72 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#construction-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Construction Methods
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#favorites_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Favorites
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Favorites">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#manage-favorites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Manage Favorites
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Manage Favorites">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#name" class="md-nav__link">
+    <span class="md-ellipsis">
+      Name
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dashboards_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dashboards
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#widgets_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Widgets
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -845,12 +911,12 @@
 
   <h1>Home</h1>
 
+<p><link href="style.css" rel="stylesheet"></p>
 <h4 id="menu">Menu</h4>
 <div style="background-color: #FFCD43; border-left: 8px solid #2196F3; padding: 10px; color:black; font-size:1.2rem;">
-    <p style="padding-top:15px;"><strong>Note:</strong> This is still in early  development. Feel free to give feedback.</p>
+    <p style="padding-top:5px;"><strong>Note:</strong> This is still in early  development. Feel free to give feedback.</p>
 </div>
 
-<p>.</p>
 <p>When a user opens the application, it directly routes to the home page. The homepage is customizable per user which allows the user to modify his/her home page with the following:</p>
 <h6 id="shortcuts">Shortcuts</h6>
 <ul>
@@ -873,6 +939,131 @@
     <img src="./Resources/Images/Home_981x587.png" alt="Home Image" style="width: 100%; height: auto;">
 </div>
 
+<p><link href="../../style.css" rel="stylesheet" ></link></p>
+<p><strong><em>Shortcuts are direct links to external sites required by CMS users</em></strong></p>
+<p><strong>SCE Portal</strong> -- redirects to <a href="https://login.microsoftonline.com/5b2a8fee-4c95-4bdc-8aae-196f8aacb1b6/oauth2/authorize?client_id=00000003-0000-0ff1-ce00-000000000000&amp;response_mode=form_post&amp;response_type=code%20id_token&amp;resource=00000003-0000-0ff1-ce00-000000000000&amp;scope=openid&amp;nonce=5102D538B6668B52140517F8EDB5221EA69416D77CDD7191-F802F3CC4227BA1149AB14BA6F43C15C1810E6417A39AC00D10F9FAC4F0440E4&amp;redirect_uri=https%3A%2F%2Fedisonintl%2Esharepoint%2Ecom%2F_forms%2Fdefault%2Easpx&amp;state=OD0w&amp;claims=%7B%22id_token%22%3A%7B%22xms_cc%22%3A%7B%22values%22%3A%5B%22CP1%22%5D%7D%7D%7D&amp;wsucxt=1&amp;cobrandid=11bd8083-87e0-41b5-bb78-0bc43c8a8e8a&amp;client-request-id=33921da1-50a0-5000-2e7b-1b542d1497d4">Microsoft
+ login</a>
+ page through which the user can login to their <strong>SCE portal</strong></p>
+<p><strong>SigAlert</strong> -- redirects to <a href="https://www.sigalert.com/?lat=33.984259&amp;lon=-118.223015&amp;z=2">SigAlert
+ website</a>
+ where the user can view comprehensive Los Angeles traffic reports with
+ real-time speeds, accidents, and traffic reports.</p>
+<h4 id="construction-methods">Construction Methods</h4>
+<p><em>User with session -</em> [link before redirecting for a user with a
+ session]</p>
+<p><em>User without session</em> - redirects to <a href="https://login.microsoftonline.com/5b2a8fee-4c95-4bdc-8aae-196f8aacb1b6/oauth2/authorize?client_id=00000003-0000-0ff1-ce00-000000000000&amp;response_mode=form_post&amp;response_type=code%20id_token&amp;resource=00000003-0000-0ff1-ce00-000000000000&amp;scope=openid&amp;nonce=5102D538B6668B52140517F8EDB5221EA69416D77CDD7191-F802F3CC4227BA1149AB14BA6F43C15C1810E6417A39AC00D10F9FAC4F0440E4&amp;redirect_uri=https%3A%2F%2Fedisonintl%2Esharepoint%2Ecom%2F_forms%2Fdefault%2Easpx&amp;state=OD0w&amp;claims=%7B%22id_token%22%3A%7B%22xms_cc%22%3A%7B%22values%22%3A%5B%22CP1%22%5D%7D%7D%7D&amp;wsucxt=1&amp;cobrandid=11bd8083-87e0-41b5-bb78-0bc43c8a8e8a&amp;client-request-id=33921da1-50a0-5000-2e7b-1b542d1497d4">Microsoft
+ login</a>
+ page to access the <strong>construction methods</strong> site after the login with
+ Microsoft</p>
+<p><strong>Safety Home Page</strong></p>
+<p><em>User with session -</em> [link before redirecting for a user with a
+ session]</p>
+<p><em>User without session</em> - redirects to <a href="https://login.microsoftonline.com/5b2a8fee-4c95-4bdc-8aae-196f8aacb1b6/oauth2/authorize?client_id=00000003-0000-0ff1-ce00-000000000000&amp;response_mode=form_post&amp;response_type=code%20id_token&amp;resource=00000003-0000-0ff1-ce00-000000000000&amp;scope=openid&amp;nonce=5102D538B6668B52140517F8EDB5221EA69416D77CDD7191-F802F3CC4227BA1149AB14BA6F43C15C1810E6417A39AC00D10F9FAC4F0440E4&amp;redirect_uri=https%3A%2F%2Fedisonintl%2Esharepoint%2Ecom%2F_forms%2Fdefault%2Easpx&amp;state=OD0w&amp;claims=%7B%22id_token%22%3A%7B%22xms_cc%22%3A%7B%22values%22%3A%5B%22CP1%22%5D%7D%7D%7D&amp;wsucxt=1&amp;cobrandid=11bd8083-87e0-41b5-bb78-0bc43c8a8e8a&amp;client-request-id=33921da1-50a0-5000-2e7b-1b542d1497d4">Microsoft
+ login</a>
+ page to access the <strong>safety homepage</strong> site after the login with
+ Microsoft</p>
+<p><strong>Safety A-Z Index</strong></p>
+<div class = "highlighted">
+     <strong>User with session</strong> link before redirecting for a user with a
+     session </div>
+
+<p><em>User without session</em> - redirects to <a href="https://login.microsoftonline.com/5b2a8fee-4c95-4bdc-8aae-196f8aacb1b6/oauth2/authorize?client_id=00000003-0000-0ff1-ce00-000000000000&amp;response_mode=form_post&amp;response_type=code%20id_token&amp;resource=00000003-0000-0ff1-ce00-000000000000&amp;scope=openid&amp;nonce=5102D538B6668B52140517F8EDB5221EA69416D77CDD7191-F802F3CC4227BA1149AB14BA6F43C15C1810E6417A39AC00D10F9FAC4F0440E4&amp;redirect_uri=https%3A%2F%2Fedisonintl%2Esharepoint%2Ecom%2F_forms%2Fdefault%2Easpx&amp;state=OD0w&amp;claims=%7B%22id_token%22%3A%7B%22xms_cc%22%3A%7B%22values%22%3A%5B%22CP1%22%5D%7D%7D%7D&amp;wsucxt=1&amp;cobrandid=11bd8083-87e0-41b5-bb78-0bc43c8a8e8a&amp;client-request-id=33921da1-50a0-5000-2e7b-1b542d1497d4">Microsoft
+ login</a>
+ page to access the <strong>safety A-Z index</strong> site after the login with
+ Microsoft</p>
+<p>CDM Library <strong>-</strong> redirects to <a href="https://d.docs.live.net/ff02b96d36b6253e/Documents/redirects%20to%20Microsoft%20login%20page%20to%20access%20the%20safety%20A-Z%20index%20site">CDM
+ Library</a>
+ page to access the <strong>CDM Library</strong> site (not accessible at the moment)</p>
+<p><strong>Technology Integration</strong></p>
+<div class = "highlighted">
+     <strong>User with session</strong> link before redirecting for a user with a
+     session </div>
+
+<p><em>User without session</em> - redirects to <a href="https://login.microsoftonline.com/5b2a8fee-4c95-4bdc-8aae-196f8aacb1b6/oauth2/authorize?client_id=00000003-0000-0ff1-ce00-000000000000&amp;response_mode=form_post&amp;response_type=code%20id_token&amp;resource=00000003-0000-0ff1-ce00-000000000000&amp;scope=openid&amp;nonce=5102D538B6668B52140517F8EDB5221EA69416D77CDD7191-F802F3CC4227BA1149AB14BA6F43C15C1810E6417A39AC00D10F9FAC4F0440E4&amp;redirect_uri=https%3A%2F%2Fedisonintl%2Esharepoint%2Ecom%2F_forms%2Fdefault%2Easpx&amp;state=OD0w&amp;claims=%7B%22id_token%22%3A%7B%22xms_cc%22%3A%7B%22values%22%3A%5B%22CP1%22%5D%7D%7D%7D&amp;wsucxt=1&amp;cobrandid=11bd8083-87e0-41b5-bb78-0bc43c8a8e8a&amp;client-request-id=33921da1-50a0-5000-2e7b-1b542d1497d4">Microsoft
+ login</a>
+ page to access the <strong>Technology Integration</strong> site after the login
+ with Microsoft</p>
+<p><strong>Weather</strong> - redirects to
+ <a href="https://d.docs.live.net/ff02b96d36b6253e/Documents/weather">weather</a>
+ site where the user can view weather forecasts on different locations
+ of their interest</p>
+<p>Upload Check</p>
+<p><strong>Error -</strong> shows an error that the <strong>file</strong> or <strong>file path</strong> is
+ invalid <div class="highlighted">right flow + why the error is happening</div></p>
+<p>T&amp;D Home</p>
+<div class = "highlighted">
+     <strong>User with session</strong> link before redirecting for a user with a
+     session </div>
+
+<p>. <br />
+<em>User without session</em>- redirects to <a href="https://login.microsoftonline.com/5b2a8fee-4c95-4bdc-8aae-196f8aacb1b6/oauth2/authorize?client_id=00000003-0000-0ff1-ce00-000000000000&amp;response_mode=form_post&amp;response_type=code%20id_token&amp;resource=00000003-0000-0ff1-ce00-000000000000&amp;scope=openid&amp;nonce=5102D538B6668B52140517F8EDB5221EA69416D77CDD7191-F802F3CC4227BA1149AB14BA6F43C15C1810E6417A39AC00D10F9FAC4F0440E4&amp;redirect_uri=https%3A%2F%2Fedisonintl%2Esharepoint%2Ecom%2F_forms%2Fdefault%2Easpx&amp;state=OD0w&amp;claims=%7B%22id_token%22%3A%7B%22xms_cc%22%3A%7B%22values%22%3A%5B%22CP1%22%5D%7D%7D%7D&amp;wsucxt=1&amp;cobrandid=11bd8083-87e0-41b5-bb78-0bc43c8a8e8a&amp;client-request-id=33921da1-50a0-5000-2e7b-1b542d1497d4">Microsoft
+ login</a>
+ page to access the <strong>T&amp;D Home</strong> site after the login with Microsoft</p>
+<p>Leave Accruals/Time-off Balance</p>
+<div class = "highlighted">
+     <strong>User with session</strong> link before redirecting for a user with a
+     session </div>
+
+<p><em>User without session</em>- redirects to <a href="https://login.microsoftonline.com/5b2a8fee-4c95-4bdc-8aae-196f8aacb1b6/oauth2/authorize?client_id=00000003-0000-0ff1-ce00-000000000000&amp;response_mode=form_post&amp;response_type=code%20id_token&amp;resource=00000003-0000-0ff1-ce00-000000000000&amp;scope=openid&amp;nonce=5102D538B6668B52140517F8EDB5221EA69416D77CDD7191-F802F3CC4227BA1149AB14BA6F43C15C1810E6417A39AC00D10F9FAC4F0440E4&amp;redirect_uri=https%3A%2F%2Fedisonintl%2Esharepoint%2Ecom%2F_forms%2Fdefault%2Easpx&amp;state=OD0w&amp;claims=%7B%22id_token%22%3A%7B%22xms_cc%22%3A%7B%22values%22%3A%5B%22CP1%22%5D%7D%7D%7D&amp;wsucxt=1&amp;cobrandid=11bd8083-87e0-41b5-bb78-0bc43c8a8e8a&amp;client-request-id=33921da1-50a0-5000-2e7b-1b542d1497d4">Microsoft
+ login</a>
+ page to access the <strong>Leave Accruals</strong> site after the login with
+ Microsoft</p>
+<h2 id="favorites_1">Favorites</h2>
+<p>A favorite is a quick link to a resource that you access frequently to
+complete own work. It can be a link to a file or a program, a bookmark,
+or a saved search that is created within the IWMS Client. You can manage
+your own favorites. If you add a favorite, it is available only to you</p>
+<h3 id="manage-favorites">Manage Favorites</h3>
+<h4 id="name">Name</h4>
+<p>Shows the list of already created favorites, the buttons below are used to manage these favorites and create new ones</p>
+<p><strong>New Link</strong></p>
+<ol>
+<li>
+<p>Click the <strong>manage favorites</strong> button to open the <strong>manage
+    favorites</strong> window</p>
+</li>
+<li>
+<p>Type the desired name for your favorite in the <strong>link name</strong> input
+    box</p>
+</li>
+<li>
+<p>For the <strong>link path,</strong> this field will be filled after selecting one option among <strong>browse to a program file, Link to bookmark, Link to saved search</strong></p>
+<p>a.  <strong>Browse to a program file --</strong> opens windows explorer where user can select any windows program shortcut. After selecting the desired windows application, the application link will be filled in the <strong>link path</strong></p>
+<p>b.  <strong>Link to bookmark -</strong></p>
+<p>c.  <strong>Link to saved search</strong>: opens a window which has saved search results, select any of the saved searches and click <strong>OK</strong> to proceed. You can also remove undesired saved searches in this window by selecting any saved search and using the <strong>delete</strong> option</p>
+<p><div class="note"><strong>Note</strong>: you must have an already saved search for this option to work, to save a search go to <strong>work management</strong>, do a <strong>search</strong> and <strong>save</strong> after getting desired results</div></p>
+</li>
+<li>
+<p>After successfully adding a <strong>name</strong> and <strong>selecting a link</strong>, click
+    on the <strong>update link</strong> then <strong>OK</strong></p>
+</li>
+<li>
+<p>The created favorite will be visible in the <strong>favorites</strong> section</p>
+</li>
+</ol>
+<p><strong>Delete Link</strong></p>
+<p>Deletes an already created favorite link and removes it from the
+favorite list</p>
+<p><strong>Update Link</strong></p>
+<p>Saves the changes made on a link, and updates in the favorites list
+after OK button is pressed. Changes can be rename <strong>link name</strong> or
+change <strong>link path.</strong></p>
+<h2 id="dashboards_1">Dashboards</h2>
+<p>The Dashboard section displays the statistical information related to
+the inbox and also lists the pending activities that you have to
+complete. It also displays Today\'s Work, Current Work, and Future work
+which will show Items and the count.</p>
+<p>Inbox statistics - The Inbox Statistics section displays the work items
+in your Inbox. It provides vital information about the work items such
+as the work type, the region of the work, the total items of a work item
+based upon area and work type, any tasks that need immediate attention
+(jeopardy), and tasks where the due date has already occurred. Clicking
+a row in the Inbox Statistics section displays the Inbox, runs an auto
+search, and filters the data as per the selected row.</p>
+<p>Today's work</p>
+<p>Current work</p>
+<p>Future work</p>
+<h2 id="widgets_1">Widgets</h2>
 <p><em>Tensing USA</em> | <a href="http://www.tensing.com/terms-and-conditions/">Terms &amp; Conditions</a> | <a href="http://www.tensing.com/privacy-statement-en-gb/">Privacy and Disclaimer</a></p>
 
 

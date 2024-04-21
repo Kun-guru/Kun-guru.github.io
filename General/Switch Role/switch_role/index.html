@@ -63,6 +63,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#prerequisites" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -258,7 +263,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Navigation/shortcuts/" class="md-nav__link">
+      <a href="../../../Navigation/Home/shortcuts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -279,7 +284,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Navigation/favorites/" class="md-nav__link">
+      <a href="../../../Navigation/Home/favorites/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -300,7 +305,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Navigation/dashboards/" class="md-nav__link">
+      <a href="../../../Navigation/Home/dashboards/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -321,7 +326,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Navigation/widgets/" class="md-nav__link">
+      <a href="../../../Navigation/Home/widgets/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -590,6 +595,17 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Switch Role
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -599,6 +615,47 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Prerequisites">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#perform-a-role-switch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Perform a Role Switch
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -771,6 +828,38 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Prerequisites">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#perform-a-role-switch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Perform a Role Switch
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -786,7 +875,71 @@
 
   <h1>Switch Role</h1>
 
-
+<h2 id="prerequisites">Prerequisites</h2>
+<ul>
+<li>Ensure the current user is authenticated and authorized to switch roles.</li>
+</ul>
+<h3 id="perform-a-role-switch">Perform a Role Switch</h3>
+<ol>
+<li>
+<p><strong>Initiate Role Switch</strong></p>
+<ul>
+<li>The user triggers the role switch process by clicking on the <strong>Switch Role</strong> icon.<br />
+<img alt="Switch Role" src="../switch_role_shortcut.png" /></li>
+</ul>
+</li>
+<li>
+<p><strong>Display Role Selection Dialog</strong></p>
+<ul>
+<li>The system presents a dialog modal <strong>Switch role</strong> with a list of available roles for the user to select from. The roles are displayed in a dropdown menu under <strong>Available roles</strong>:. 
+    <img alt="Switch Role" src="../switch_role_dialog.png" /></li>
+</ul>
+</li>
+<li>
+<p><strong>User Selects New Role</strong></p>
+<ul>
+<li>The user chooses a new role from the dialog options. For example, they might select between:<ul>
+<li><strong>W – Administrator</strong></li>
+<li><strong>G – Street Light Repairman.</strong></li>
+</ul>
+</li>
+<li>This action is captured by the <code>SelectedRoleId</code> property of the <code>selectRoleViewModel</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Verify Role Change</strong>  </p>
+<ul>
+<li>Check if the new role differs from the old role before the role change:<ul>
+<li>If no, terminate the process.</li>
+<li>If yes, proceed to the next step.</li>
+<li>All active tabs are closed.</li>
+<li><img alt="Close Tabs" src="../close_tabs_popup.png" /></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Reopen Homepage with New Role Context</strong></p>
+<ul>
+<li>The homepage is reopened with parameters tailored to the new role using<br />
+<code>Controller.ActionHandler.ExecuteAction</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Audit Role Change</strong></p>
+<ul>
+<li>An audit log is created to record the role change event:<br />
+<code>User {username} changed role from {oldRole} to {newRole}</code></li>
+<li>If an exception occurs during auditing, it is caught and handled without disrupting the user experience.</li>
+</ul>
+</li>
+<li>
+<p><strong>Role Switch Completion</strong></p>
+<ul>
+<li>The role switch is complete, and the user can continue their session under the new role.</li>
+</ul>
+</li>
+</ol>
 
 
 

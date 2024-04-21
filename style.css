@@ -1,8 +1,15 @@
-.highlight {
-    background-color: rgb(231, 231, 62);
+.highlighted {
+    background-color: hsla(44, 100%, 63%, 0.64);
     color: black;
-    padding: 10px 5px;
-
-    border: black 2px;
+    padding: 0px 5px;
+    /* border: black 2px; */
     border-radius: 3px;
+    height: .9rem;
+}
+
+.note {
+    background-color: rgb(180, 255, 255);
+    padding: 10px 5px;
+    color: black;
+    border-left: 8px solid #2196F3;
 }
