@@ -284,11 +284,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Navigation/Home/favorites/" class="md-nav__link">
+      <a href="../../../Navigation/Home/dashboards/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Favorites
+    Dashboards
   </span>
   
 
@@ -305,11 +305,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Navigation/Home/dashboards/" class="md-nav__link">
+      <a href="../../../Navigation/Home/favorites/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Dashboards
+    Favorites
   </span>
   
 
@@ -699,6 +699,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Assigned AORs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#selection-and-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Selection and Management
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -707,6 +722,30 @@
       AVL
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="AVL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Settings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#navigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Navigation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1027,6 +1066,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Assigned AORs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#selection-and-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Selection and Management
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1035,6 +1089,30 @@
       AVL
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="AVL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Settings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#navigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Navigation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1168,9 +1246,10 @@
 <h4 id="overview">Overview</h4>
 <p>The Alerts tab allows users to manage their alert preferences based on priority levels and types of work-related alerts.</p>
 <h4 id="priority-levels">Priority Levels</h4>
-<p><strong>1</strong>: Critical alerts that require immediate attention.<br />
-<strong>2</strong>: Important alerts that should be addressed soon.<br />
-<strong>3</strong>: General alerts that are informative but not urgent.  </p>
+<p><span class="todo"><strong>Todo: </strong>Find out the proper order of priority</span>  <br />
+<strong>1</strong>:   <!--Critical alerts that require immediate attention.   --><br />
+<strong>2</strong>:   <!--Important alerts that should be addressed soon. --> <br />
+<strong>3</strong>:   <!--General alerts that are informative but not urgent.  --></p>
 <h4 id="user-steps">User Steps</h4>
 <ol>
 <li>
@@ -1201,7 +1280,41 @@
 </li>
 </ol>
 <h3 id="assigned-aors">Assigned AORs</h3>
+<p><img alt="Assigned AORs" src="../assigned_aors.png" />
+The Assigned AORs (Areas of Responsibility) tab is part of the application preferences settings. It allows users to manage their assigned operational areas or locations within the application.</p>
+<p><strong>Assigned AORs List</strong><br />
+This panel displays a list of operational areas or locations that can be assigned to users. These represent areas of responsibility within the application already assigned to the user.</p>
+<h4 id="selection-and-management"><strong>Selection and Management</strong></h4>
+<ul>
+<li>
+<p><strong>User Primary AORs</strong><br />
+  Users can select and manage their primary AORs by adding them to the <strong>User Primary AORs</strong> using the <strong>Select</strong> buttons <img alt="Select AORs" src="../select_aors.png" /> or remove the selected AORs with the <strong>Remove</strong> buttons <img alt="Remove AORs" src="../remove_aors.png" />.<br />
+  The <strong>User Primary AORs</strong> influence the priority of data and tasks that are presented to the user in the Inbox.</p>
+</li>
+<li>
+<p><strong>Admin Primary AORs</strong><br />
+  This list is managed by administrators to assign primary AORs to users, reflecting the areas where they have primary oversight or responsibility.</p>
+</li>
+</ul>
+<p><strong>Default Selection Field</strong><br />
+At the bottom of the list panel, there is a default selection field showing the currently selected AOR. This field is likely editable, allowing users to quickly select an AOR as their default.</p>
+<p><strong>Confirmation Buttons</strong>:<br />
+<strong>OK</strong> and <strong>Cancel</strong> buttons are for confirming or dismissing changes made respectively.</p>
 <h3 id="avl">AVL</h3>
+<blockquote>
+<p><img alt="AVL Settings" src="../AVL.png" />  </p>
+</blockquote>
+<h4 id="settings">Settings</h4>
+<ul>
+<li><strong>Follow Me</strong>
+Automatically centers the map on 'My Location' when approaching the map edge.<br />
+It has a dropdown to set the percentage of distance to edge of map to trigger re-centering on the user's position that defaults to <code>10%</code> other valid options are: <code>0%</code>, <code>10%</code>, <code>20%</code>, <code>30%</code>, <code>40%</code>, <code>50%</code></li>
+</ul>
+<h4 id="navigation">Navigation</h4>
+<ul>
+<li><strong>Start CoPilot Automatically</strong>: Checkbox to launch CoPilot when the application starts.</li>
+<li><strong>Show Navigation Warning Popup</strong>: Checkbox to enable/disable warning popups when CoPilot fails to find an address.</li>
+</ul>
 <h3 id="circuit-search">Circuit Search</h3>
 <h3 id="comments">Comments</h3>
 <h3 id="dashboards">Dashboards</h3>
